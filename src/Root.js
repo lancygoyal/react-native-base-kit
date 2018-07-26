@@ -8,18 +8,23 @@
 'use strict';
 
 import React, { Component } from 'react';
-import { StyleSheet, View, Platform, StatusBar } from 'react-native';
-import Navigator from './Navigator';
+import { StyleSheet, View, StatusBar } from 'react-native';
 import { Progress } from './components/common';
+import Navigator from './Navigator';
+import NavigationService from './utilities/NavigationService';
 import Constants from './constants';
 
 export default class Root extends Component {
   render() {
     return (
       <View style={styles.container}>
-        {Platform.OS === 'android' && <StatusBar backgroundColor={Constants.Colors.AccentColor} />}
+        <StatusBar backgroundColor="blue" barStyle="light-content" />
         <Progress />
-        <Navigator />
+        <Navigator
+          ref={navigatorRef => {
+            NavigationService.setTopLevelNavigator(navigatorRef);
+          }}
+        />
       </View>
     );
   }

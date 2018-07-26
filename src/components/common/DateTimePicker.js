@@ -17,7 +17,6 @@ import {
   TimePickerAndroid
 } from 'react-native';
 import Constants from '../../constants';
-import PropTypes from 'prop-types';
 import Text from './Text';
 import moment from 'moment';
 

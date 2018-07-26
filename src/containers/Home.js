@@ -6,56 +6,51 @@
  * */
 
 import React, { Component } from 'react';
-import { Button, FlatList } from "react-native";
-import { Text, ListItem, Left, Body, Right } from "native-base";
+import { Button, FlatList } from 'react-native';
+import { Text, ListItem, Left, Body, Right } from 'native-base';
 
 export default class HomeScreen extends Component {
-
   static navigationOptions = ({ navigation }) => ({
     title: 'Home',
     headerRight: (
-      <Button
-        onPress={() => navigation.navigate('Detail')}
-        title="Detail"
-        color="#fff"
-      />
-    ),
+      <Button onPress={() => navigation.navigate('Detail')} title="Detail" color="#fff" />
+    )
   });
 
   constructor() {
     super();
     this.state = {
       data: [
-        { name: "Movies", header: true },
-        { name: "Interstellar", header: false },
-        { name: "Dark Knight", header: false },
-        { name: "Pop", header: false },
-        { name: "Pulp Fiction", header: false },
-        { name: "Burning Train", header: false },
-        { name: "Music", header: true },
-        { name: "Adams", header: false },
-        { name: "Nirvana", header: false },
-        { name: "Amrit Maan", header: false },
-        { name: "Oye Hoye", header: false },
-        { name: "Eminem", header: false },
-        { name: "Places", header: true },
-        { name: "Jordan", header: false },
-        { name: "Punjab", header: false },
-        { name: "Ludhiana", header: false },
-        { name: "Jamshedpur", header: false },
-        { name: "India", header: false },
-        { name: "People", header: true },
-        { name: "Jazzy", header: false },
-        { name: "Appie", header: false },
-        { name: "Baby", header: false },
-        { name: "Sunil", header: false },
-        { name: "Arrow", header: false },
-        { name: "Things", header: true },
-        { name: "table", header: false },
-        { name: "chair", header: false },
-        { name: "fan", header: false },
-        { name: "cup", header: false },
-        { name: "cube", header: false }
+        { name: 'Movies', header: true },
+        { name: 'Interstellar', header: false },
+        { name: 'Dark Knight', header: false },
+        { name: 'Pop', header: false },
+        { name: 'Pulp Fiction', header: false },
+        { name: 'Burning Train', header: false },
+        { name: 'Music', header: true },
+        { name: 'Adams', header: false },
+        { name: 'Nirvana', header: false },
+        { name: 'Amrit Maan', header: false },
+        { name: 'Oye Hoye', header: false },
+        { name: 'Eminem', header: false },
+        { name: 'Places', header: true },
+        { name: 'Jordan', header: false },
+        { name: 'Punjab', header: false },
+        { name: 'Ludhiana', header: false },
+        { name: 'Jamshedpur', header: false },
+        { name: 'India', header: false },
+        { name: 'People', header: true },
+        { name: 'Jazzy', header: false },
+        { name: 'Appie', header: false },
+        { name: 'Baby', header: false },
+        { name: 'Sunil', header: false },
+        { name: 'Arrow', header: false },
+        { name: 'Things', header: true },
+        { name: 'table', header: false },
+        { name: 'chair', header: false },
+        { name: 'fan', header: false },
+        { name: 'cup', header: false },
+        { name: 'cube', header: false }
       ],
       stickyHeaderIndices: []
     };
@@ -80,9 +75,7 @@ export default class HomeScreen extends Component {
         <ListItem itemDivider>
           <Left />
           <Body style={{ marginRight: 40 }}>
-            <Text style={{ fontWeight: "bold" }}>
-              {item.name}
-            </Text>
+            <Text style={{ fontWeight: 'bold' }}>{item.name}</Text>
           </Body>
           <Right />
         </ListItem>
@@ -107,6 +100,5 @@ export default class HomeScreen extends Component {
         stickyHeaderIndices={this.state.stickyHeaderIndices}
       />
     );
-  };
-
+  }
 }

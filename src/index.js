@@ -16,7 +16,7 @@ import Root from './Root';
 import Notification from 'react-native-in-app-notification';
 import configureStore from './config/configureStore';
 // import { checkPermissions } from './utilities/Locations';
-import { pushNotificationInit, pushNotificationRemove } from './utilities/PushNotification';
+// import { pushNotificationInit, pushNotificationRemove } from './utilities/PushNotification';
 import Constants from './constants';
 import './utilities/StringEn';
 
@@ -52,9 +52,9 @@ export default class Application extends Component {
    * */
   initilizePushNotification = () => {
     if (Platform.OS === 'ios') {
-      pushNotificationInit(store);
+      // pushNotificationInit(store);
     } else {
-      pushNotificationInit(store, this.notification);
+      // pushNotificationInit(store, this.notification);
     }
   };
 

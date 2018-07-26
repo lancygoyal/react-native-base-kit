@@ -1,6 +1,6 @@
 /*
- * @file: constants.js
- * @description: User constants
+ * @file: index.js
+ * @description: User Reducer
  * @date: 20.July.2018
  * @author: Lancy Goyal
  */

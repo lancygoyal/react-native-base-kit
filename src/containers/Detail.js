@@ -9,7 +9,6 @@ import React, { Component } from 'react';
 import { Text, View, Button } from 'react-native';
 
 export default class DetailScreen extends Component {
-  
   static navigationOptions = {
     title: 'Detail'
   };
@@ -26,6 +25,5 @@ export default class DetailScreen extends Component {
         <Button title="Go back" onPress={() => this.props.navigation.goBack()} />
       </View>
     );
-  };
-  
+  }
 }

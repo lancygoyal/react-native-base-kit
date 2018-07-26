@@ -13,7 +13,7 @@ import Constants from '../constants';
 import Geocoder from 'react-native-geocoding';
 // import * as LocationActions from '../redux/modules/location';
 
-Geocoder.fallbackToGoogle(Constants.GoogleAPIKey);
+Geocoder.init(Constants.GoogleAPIKey);
 
 export function checkPermissions(store) {
   Permissions.check('location', { type: 'whenInUse' }).then(response => {
@@ -22,7 +22,7 @@ export function checkPermissions(store) {
         navigator.geolocation.watchPosition(
           success => {
             //console.log("success ==> ", success);
-            Geocoder.geocodePosition({
+            Geocoder.from({
               lat: success.coords.latitude,
               lng: success.coords.longitude
             })

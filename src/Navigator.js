@@ -14,19 +14,19 @@ import routes from './config/routes';
  * React Navigation's Configuration
  * */
 const stackNavigatorConfiguration = {
-//   headerMode: 'none',
-  mode: 'card',
-//   initialRouteName: 'Home',
+  // headerMode: 'none',
+  mode: 'modal',
+  // initialRouteName: 'Home',
   navigationOptions: {
     gesturesEnabled: false,
     headerStyle: {
-      backgroundColor: '#f4511e',
+      backgroundColor: '#f4511e'
     },
     headerTintColor: '#fff',
     headerTitleStyle: {
-      fontWeight: 'bold',
-    },
-  },
+      fontWeight: 'bold'
+    }
+  }
 };
 
 export default createStackNavigator(routes, stackNavigatorConfiguration);
