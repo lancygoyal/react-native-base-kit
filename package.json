@@ -34,7 +34,7 @@
     "precommit": "npm run rp && lint-staged"
   },
   "dependencies": {
-    "lodash": "^4.17.10",
+    "lodash": "^4.17.13",
     "moment": "^2.22.2",
     "native-base": "^2.7.2",
     "prop-types": "^15.6.2",
